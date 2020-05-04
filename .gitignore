@@ -84,3 +84,5 @@ android/app/google-services.json
 ios/app/dropbox.key
 ios/app/GoogleService-Info.plist
 
+# MOHSEN WAS HERE
+sdk.dir = /home/mohsen/Android/Sdk
