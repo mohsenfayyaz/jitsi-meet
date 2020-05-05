@@ -81,7 +81,8 @@ class LonelyMeetingExperience extends PureComponent<Props> {
                     ] }>
                     { t('lonelyMeetingExperience.youAreAlone') }
                 </Text>
-                { !_isInviteFunctionsDiabled && (
+                {/* MOHSEN WAS HERE */}
+                { !_isInviteFunctionsDiabled && false && (
                     <TouchableOpacity
                         onPress = { this._onPress }
                         style = { [
