@@ -29,7 +29,7 @@ const DEFAULT_STATE = {
     localFlipX: true,
     micDeviceId: undefined,
     serverURL: undefined,
-    startAudioOnly: false,
+    startAudioOnly: true,
     startWithAudioMuted: false,
     startWithVideoMuted: false,
     userSelectedAudioOutputDeviceId: undefined,

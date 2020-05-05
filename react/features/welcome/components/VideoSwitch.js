@@ -53,6 +53,9 @@ class VideoSwitch extends Component<Props> {
         this._onStartAudioOnlyChange = this._onStartAudioOnlyChange.bind(this);
         this._onStartAudioOnlyFalse = this._onStartAudioOnlyChangeFn(false);
         this._onStartAudioOnlyTrue = this._onStartAudioOnlyChangeFn(true);
+
+        // MOHSEN WAS HERE
+        this._onStartAudioOnlyChange(true);
     }
 
     /**
