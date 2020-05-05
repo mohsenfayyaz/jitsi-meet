@@ -35,7 +35,7 @@ export default {
     'Header': {
         background: ColorPalette.blue,
         icon: ColorPalette.white,
-        statusBar: ColorPalette.blueHighlight,
+        statusBar: ColorPalette.statusBarColor,
         statusBarContent: ColorPalette.white,
         text: ColorPalette.white
     },

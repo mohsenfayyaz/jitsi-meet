@@ -19,8 +19,15 @@ export const ColorPalette = {
      */
     black: BLACK,
     blackBlue: 'rgb(0, 3, 6)',
-    blue: '#17A0DB',
-    blueHighlight: '#1081b2',
+
+    // blue: '#17A0DB',
+    // blueHighlight: '#1081b2',
+    // MOHSEN WAS HERE
+    blue: '#9f60ff',
+    blueHighlight: 'rgb(178, 210, 53)',
+    statusBarColor: '#6730e3',
+    switchDisabledIconColor: 'rgba(0, 0, 0, 0.4)',
+
     buttonUnderlay: '#495258',
     darkGrey: '#555555',
     green: '#40b183',
