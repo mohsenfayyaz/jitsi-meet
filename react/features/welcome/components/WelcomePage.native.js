@@ -39,7 +39,8 @@ import WelcomePageLists from './WelcomePageLists';
 import WelcomePageSideBar from './WelcomePageSideBar';
 
 import * as Animatable from 'react-native-animatable';
-
+// import Video from 'react-native-video';
+import { VideoPlayer } from "../../videoPlayer/VideoPlayer";
 /**
  * The native container rendering the welcome page.
  *

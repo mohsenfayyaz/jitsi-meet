@@ -10,14 +10,17 @@
 // collect the polyfills' files.
 import './features/base/lib-jitsi-meet/native/polyfills-bundler';
 
-import React, { PureComponent } from 'react';
-import { AppRegistry } from 'react-native';
+import React, {PureComponent} from 'react';
+import {AppRegistry, View} from 'react-native';
 
-import { App } from './features/app';
-import { IncomingCallApp } from './features/mobile/incoming-call';
+import {App} from './features/app';
+import {IncomingCallApp} from './features/mobile/incoming-call';
 
 // It's crucial that the native loggers are created ASAP, not to lose any data.
-import { _initLogging } from './features/base/logging/functions';
+import {_initLogging} from './features/base/logging/functions';
+import {VideoPlayer} from "./features/videoPlayer/VideoPlayer";
+import Video from "react-native-video";
+import * as Animatable from "react-native-animatable";
 
 declare var __DEV__;
 
@@ -46,10 +49,26 @@ class Root extends PureComponent<Props> {
      * @inheritdoc
      * @returns {ReactElement}
      */
+    constructor(props) {
+        super(props);
+        this.state = {
+            isVideoPlaying: true
+        }
+    }
+
+    onVideoFinish() {
+        this.setState({
+            isVideoPlaying: false
+        });
+    }
+
     render() {
         return (
-            <App
-                { ...this.props } />
+            this.state.isVideoPlaying ?
+                <VideoPlayer finishCallback={() => this.onVideoFinish()}/>
+                :
+                <App
+                    {...this.props} />
         );
     }
 }
@@ -67,7 +86,8 @@ if (!__DEV__) {
 
     AppRegistry.runApplication = (...args) => {
         // $FlowExpectedError
-        console.log = () => {};
+        console.log = () => {
+        };
         __orig_appregistry_runapplication(...args);
         // $FlowExpectedError
         console.log = __orig_console_log;
